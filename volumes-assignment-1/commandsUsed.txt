@@ -1,0 +1,7 @@
+docker container run -d --name postgres -v psql:/var/lib/postgresql/data -e POSTGRES_PASSWORD=mysecretpassword -d postgres:9.6.1
+docker container logs postgres
+docker container stop postgres
+docker container run -d --name postgres2 -v psql:/var/lib/postgresql/data -e POSTGRES_PASSWORD=mysecretpassword -d postgres:9.6.2
+docker container ps -a
+docker volume ls
+docker container logs postgres2
